@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Chioma – web developer, data analyst and content creator." />
+  <title>Chioma | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">chioma<span>.</span></a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="icon-btn nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Hello, I'm Chioma 👋</p>
+          <h1>I build <span class="typed" id="typed"></span><span class="cursor">|</span></h1>
+          <p class="hero__sub">
+            I turn ideas and data into clean, useful digital experiences — from websites
+            and dashboards to videos and content that people actually enjoy.
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View my work</a>
+            <a href="#contact" class="btn btn--ghost">Let's talk</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="blob"></div>
+          <div class="avatar">C</div>
+          <!-- Replace the .avatar div with: <img src="images/me.jpg" alt="Photo of Chioma" class="avatar-img" /> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="reveal">
+          <h2 class="section__title">About me</h2>
+          <p>
+            I'm currently doing my industrial training (SIWES) in an IT department,
+            where I get hands-on experience across web development, data analysis,
+            content creation, video editing and digital transformation.
+          </p>
+          <p>
+            I enjoy the space where technical and creative work meet — building something
+            that works well <em>and</em> looks good. I'm always learning and open to
+            new opportunities.
+          </p>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__num" data-count="12">0</span><span>Projects</span></div>
+          <div class="stat"><span class="stat__num" data-count="5">0</span><span>Skill areas</span></div>
+          <div class="stat"><span class="stat__num" data-count="1">0</span><span>Year of training</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal">What I do</h2>
+        <div class="skills">
+          <article class="skill reveal">
+            <h3>Web Development</h3>
+            <p>Responsive, accessible websites with HTML, CSS and JavaScript.</p>
+            <div class="bar"><span data-level="85"></span></div>
+          </article>
+          <article class="skill reveal">
+            <h3>Data Analysis</h3>
+            <p>Cleaning, analysing and visualising data to support decisions.</p>
+            <div class="bar"><span data-level="75"></span></div>
+          </article>
+          <article class="skill reveal">
+            <h3>Content Creation</h3>
+            <p>Writing and designing content with a clear voice and purpose.</p>
+            <div class="bar"><span data-level="80"></span></div>
+          </article>
+          <article class="skill reveal">
+            <h3>Video Editing</h3>
+            <p>Storytelling through cuts, pacing, sound and motion.</p>
+            <div class="bar"><span data-level="70"></span></div>
+          </article>
+          <article class="skill reveal">
+            <h3>Digital Transformation</h3>
+            <p>Helping teams move manual processes into efficient digital tools.</p>
+            <div class="bar"><span data-level="65"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal">Selected projects</h2>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="data">Data</button>
+          <button class="filter" data-filter="media">Media</button>
+        </div>
+
+        <div class="projects" id="projects-grid">
+          <!-- Cards are generated from the array in script.js -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container contact">
+        <div class="reveal">
+          <h2 class="section__title">Let's work together</h2>
+          <p>Have a project, an internship opportunity or just want to say hi? Send me a message.</p>
+          <ul class="socials">
+            <li><a href="mailto:igbokwechioma45@gmail.com">✉️ igbokwechioma45@gmail.com</a></li>
+            <li><a href="https://github.com/igbokwechioma" target="_blank" rel="noopener">💻 GitHub</a></li>
+            <li><a href="https://linkedin.com/in/igbokwechioma" target="_blank" rel="noopener">🔗 LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <label>Name
+            <input type="text" name="name" required autocomplete="name" />
+            <small class="error"></small>
+          </label>
+          <label>Email
+            <input type="email" name="email" required autocomplete="email" />
+            <small class="error"></small>
+          </label>
+          <label>Message
+            <textarea name="message" rows="5" required></textarea>
+            <small class="error"></small>
+          </label>
+          <button type="submit" class="btn btn--primary">Send message</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Chioma. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
